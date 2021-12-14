@@ -3,99 +3,143 @@
 	<automaton>
 		<!--The list of states.-->
 		<state id="0" name="q0">
-			<x>50.0</x>
-			<y>102.0</y>
+			<x>109.0</x>
+			<y>59.0</y>
+			<label>0,2,10,8,12,18</label>
 			<initial/>
 		</state>
-		<state id="1" name="q6">
-			<x>283.0</x>
-			<y>101.0</y>
+		<state id="1" name="q1">
+			<x>111.0</x>
+			<y>174.0</y>
+			<label>13,14</label>
+		</state>
+		<state id="2" name="q2">
+			<x>284.0</x>
+			<y>57.0</y>
+			<label>20,19</label>
+		</state>
+		<state id="3" name="q3">
+			<x>180.0</x>
+			<y>260.0</y>
+			<label>15,16</label>
 		</state>
 		<state id="4" name="q4">
-			<x>437.0</x>
-			<y>8.0</y>
+			<x>479.0</x>
+			<y>58.0</y>
+			<label>21,9,3,4,5,6,1,22</label>
 			<final/>
 		</state>
-		<state id="9" name="q5">
-			<x>395.0</x>
-			<y>113.0</y>
+		<state id="5" name="q5">
+			<x>468.0</x>
+			<y>338.0</y>
+			<label>4,22,3,5,1,11,6,17</label>
+			<final/>
 		</state>
-		<state id="18" name="q1">
-			<x>191.0</x>
-			<y>9.0</y>
+		<state id="6" name="q6">
+			<x>548.0</x>
+			<y>170.0</y>
+			<label>24,23</label>
 		</state>
-		<state id="22" name="q2">
-			<x>205.0</x>
-			<y>205.0</y>
+		<state id="7" name="q7">
+			<x>424.0</x>
+			<y>230.0</y>
+			<label>25,7,5,4,1,6,22</label>
+			<final/>
 		</state>
-		<state id="23" name="q3">
-			<x>480.0</x>
-			<y>203.0</y>
+		<state id="8" name="q8">
+			<x>207.0</x>
+			<y>158.0</y>
+			<label>Trap State</label>
 		</state>
 		<!--The list of transitions.-->
 		<transition>
-			<from>23</from>
+			<from>8</from>
+			<to>8</to>
+			<read>a</read>
+		</transition>
+		<transition>
+			<from>8</from>
+			<to>8</to>
+			<read>b</read>
+		</transition>
+		<transition>
+			<from>6</from>
+			<to>8</to>
+			<read>b</read>
+		</transition>
+		<transition>
+			<from>2</from>
 			<to>4</to>
-			<read>a</read>
-		</transition>
-		<transition>
-			<from>18</from>
-			<to>1</to>
-			<read>a</read>
-		</transition>
-		<transition>
-			<from>9</from>
-			<to>1</to>
 			<read>b</read>
 		</transition>
 		<transition>
-			<from>4</from>
-			<to>1</to>
-			<read>a</read>
-		</transition>
-		<transition>
-			<from>23</from>
-			<to>1</to>
-			<read>b</read>
-		</transition>
-		<transition>
-			<from>4</from>
-			<to>9</to>
+			<from>1</from>
+			<to>3</to>
 			<read>b</read>
 		</transition>
 		<transition>
 			<from>0</from>
-			<to>18</to>
-			<read>b</read>
-		</transition>
-		<transition>
-			<from>18</from>
-			<to>4</to>
-			<read>b</read>
-		</transition>
-		<transition>
-			<from>9</from>
-			<to>4</to>
+			<to>1</to>
 			<read>a</read>
 		</transition>
 		<transition>
-			<from>22</from>
-			<to>1</to>
+			<from>3</from>
+			<to>5</to>
+			<read>a</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>2</to>
+			<read>b</read>
+		</transition>
+		<transition>
+			<from>6</from>
+			<to>7</to>
+			<read>a</read>
+		</transition>
+		<transition>
+			<from>5</from>
+			<to>6</to>
+			<read>b</read>
+		</transition>
+		<transition>
+			<from>7</from>
+			<to>8</to>
 			<read>a</read>
 		</transition>
 		<transition>
 			<from>1</from>
-			<to>1</to>
-			<read>a,b</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>22</to>
+			<to>8</to>
 			<read>a</read>
 		</transition>
 		<transition>
-			<from>22</from>
-			<to>23</to>
+			<from>5</from>
+			<to>8</to>
+			<read>a</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>8</to>
+			<read>a</read>
+		</transition>
+		<transition>
+			<from>7</from>
+			<to>6</to>
+			<read>b</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>8</to>
+			<read>a</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>6</to>
+			<read>b</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>8</to>
 			<read>b</read>
 		</transition>
 	</automaton>
