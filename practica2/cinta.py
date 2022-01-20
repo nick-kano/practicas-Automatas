@@ -4,14 +4,13 @@ class cinta:
     def __init__(self,entrada):
         self.entrada=entrada
     
-
     def leer(self):
         return entrada[cabeza]
 
     def trancisionValida(self,simbolo):
         return simbolo==leer()
 
-    def trancision(leido,escribir,mover):
+    def trancision(self,leido,escribir,mover):
         if trancisionValida(leido):
             entrada[cabeza]=escribir
             if mover=="L":
