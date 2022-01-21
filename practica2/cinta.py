@@ -7,21 +7,14 @@ class cinta:
     def leer(self):
         return entrada[cabeza]
 
-    def trancisionValida(self,simbolo):
-        return simbolo==leer()
-
-    def trancision(self,leido,escribir,mover):
-        if trancisionValida(leido):
-            entrada[cabeza]=escribir
-            if mover=="L":
-                if cabeza==0:
-                    entrada.insert(0,"_")
-                else:
-                   cabeza=cabeza-1
+    def transicion(self,escribir,mover):
+        entrada[cabeza]=escribir
+        if mover=="L":
+            if cabeza==0:
+                entrada.insert(0,"_")
             else:
-                if cabeza+1>=len(entrada):
-                    entrada.append("_")
-                cabeza=cabeza+1
-            return 1
-        else:
-            return -1
+               cabeza=cabeza-1
+        elif mover == "R":
+            if cabeza+1>=len(entrada):
+                entrada.append("_")
+            cabeza=cabeza+1
