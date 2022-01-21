@@ -1,20 +1,26 @@
 class MaquinaTuring:
 
     def __init__(self,estados,entrada,cinta,inicial,blanco,finales,transicion):
-        self.estados = estados
-        self.entrada = entrada
-        self.cinta = cinta
-        self.inicial = inicial
-        self.blanco = blanco
-        self.finales = finales
-        self.transicion = transicion
-        self.estadoActual=inicial
+        self.estados = estados          #Lista de string
+        self.entrada = entrada          #lista de string
+        self.cinta = cinta              #objeto cinta
+        self.inicial = inicial          #string
+        self.blanco = blanco            #char
+        self.finales = finales          #lista de string
+        self.transicion = transicion    #objeto transicion
+        self.estadoActual=inicial       #string
 
     def acepta(self):
         return estadoActual in finales
 
     def mover(self):
         simbolo=cinta.leer()
-        siguiente=transicion.siguiente(estadoActual,simbolo)
-        cinta.transicion(simbolo,siguiente[0],siguiente[1])
-        estadoActual=siguiente[2]
+        if transicion.existe(estadoActual,simbolo):
+            cinta.transicion(transicion.simbolo(),transicion.direccion())
+            estadoActual=transicion.siguienteEstado()
+            return 0
+        else:
+            if acepta():
+                return 1
+            else:
+                return -1
