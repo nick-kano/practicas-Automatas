@@ -1,10 +1,9 @@
 import json 
 
-class js:
-    def __init__(self):
-        self.x = open("M.json")
+class JsonUwU:
+    def __init__(self,cadena):
+        self.x = open(cadena)
         self.m = json.loads(x)
-        self.x.close()
         self.estados = m["Estados"]
         self.entrada = m["Entrada"]
         self.cinta = m["Cinta"]

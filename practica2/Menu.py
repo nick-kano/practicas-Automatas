@@ -2,17 +2,17 @@ import cinta
 import MT
 import transicion
 import Js
-
+import sys
 
 class Menu:
-
-    json = js()
+    
+    j = JsonUwU(sys.argv[1])
     switch = False
     while switch == False: #revisa que la cadena si tenga los simbolos que aceptamos
         i = 0
         cadena = input("Favor de ingresar la cadena de entrada")
         for x in cadena:
-            if not(x in json.cinta):
+            if not(x in j.cinta):
                 print("Esa cadena no es valida, favor de ingresar una que lo sea")
                 break
             else:
