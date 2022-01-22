@@ -1,7 +1,7 @@
 class trancision:
-        simbolo = None
-        estado = None
-        direccion = None
+    simbolo = None
+    estado = None
+    direccion = None
 
     def __init__(self,trancisiones):
         self.trancisiones = trancisiones
