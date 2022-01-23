@@ -24,8 +24,9 @@ class cinta:
     
     def __str__(self):
         aux=""
+
         for x in range(len(self.entrada)):
             if x == self.cabeza:
                 aux = aux+"|" + self.estadoActual + "|"
-            aux = aux + " " + self.entrada[self.cabeza]+ " "
+            aux = aux + " " + self.entrada[x]+ " "
         return aux
