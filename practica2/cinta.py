@@ -6,16 +6,16 @@ class cinta:
         self.blanco=blanco
     
     def leer(self):
-        return entrada[cabeza]
+        return self.entrada[self.cabeza]
 
     def transicion(self,escribir,mover):
-        entrada[cabeza]=escribir
-        if mover=="L":
-            if cabeza==0:
-                entrada.insert(0,blanco)
+        self.entrada[self.cabeza]=escribir
+        if self.mover=="L":
+            if self.cabeza==0:
+                entrada.insert(0,self.blanco)
             else:
-               cabeza=cabeza-1
+               self.cabeza=self.cabeza-1
         elif mover == "R":
-            if cabeza+1>=len(entrada):
-                entrada.append(blanco)
-            cabeza=cabeza+1
+            if self.cabeza+1>=len(self.entrada):
+                self.entrada.append(blanco)
+            self.cabeza=self.cabeza+1

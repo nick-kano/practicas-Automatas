@@ -14,10 +14,10 @@ class MaquinaTuring:
         return estadoActual in finales
 
     def mover(self):
-        simbolo=cinta.leer()
-        if transicion.existe(estadoActual,simbolo):
-            cinta.transicion(transicion.simbolo(),transicion.direccion())
-            estadoActual=transicion.siguienteEstado()
+        simbolo=self.cinta.leer()
+        if self.transicion.existe(self.estadoActual,simbolo):
+            self.cinta.transicion(self.transicion.simbolo,self.transicion.direccion)
+            self.estadoActual=self.transicion.siguienteEstado()
             return 0
         else:
             if acepta():

@@ -7,19 +7,10 @@ class trancision:
         self.trancisiones = trancisiones
 
     def existe(self,estado,simbolo):
-        for x in trancisiones:
+        for x in self.trancisiones:
             if x[0] == estado and x[1] == simbolo:
-                estado = x[2]
-                simbolo = x[3]
-                direccion = x[4]
+                self.estado = x[2]
+                self.simbolo = x[3]
+                self.direccion = x[4]
                 return True
         return False
-
-    def simbolo(self):
-        return simbolo
-
-    def direccion(self):
-        return direccion
-
-    def estado(self):
-        return estado
