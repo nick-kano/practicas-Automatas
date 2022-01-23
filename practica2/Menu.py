@@ -19,7 +19,7 @@ class Menu:
     if(switch):
         c = Cinta.cinta(list(cadena),j.blanco)
         t = Transicion.trancision(j.transiciones)
-        mt = MT.MaquinaTuring(j.estados,j.entrada,c,j.inicial,j.finales,j.blanco,t)
+        mt = MT.MaquinaTuring(j.estados,j.entrada,c,j.inicial,j.blanco,j.finales,t)
         i = 0
         print("Las configuraciones son : ")
         print("| " + mt.estadoActual + " | " + mt.cinta.leer()) #No se si sea necesario poner la configuracion inicial, pero esta es una forma fea de que lo haga
