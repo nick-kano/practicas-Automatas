@@ -1,5 +1,5 @@
 class MaquinaTuring:
-
+    
     def __init__(self,estados,entrada,cinta,inicial,blanco,finales,transicion):
         self.estados = estados          #Lista de string
         self.entrada = entrada          #lista de string
