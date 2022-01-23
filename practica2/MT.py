@@ -16,7 +16,7 @@ class MaquinaTuring:
     def mover(self):
         simbolo=self.cinta.leer()
         if self.transicion.existe(self.estadoActual,simbolo):
-            self.cinta.transicion(self.transicion.simbolo,self.transicion.direccion)
+            self.cinta.transicion(self.transicion.estado,self.transicion.simbolo,self.transicion.direccion)
             self.estadoActual=self.transicion.estado
             return 0
         else:
