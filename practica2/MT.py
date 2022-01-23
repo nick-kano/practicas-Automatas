@@ -11,16 +11,16 @@ class MaquinaTuring:
         self.estadoActual=inicial       #string
 
     def acepta(self):
-        return estadoActual in finales
+        return self.estadoActual in self.finales
 
     def mover(self):
         simbolo=self.cinta.leer()
         if self.transicion.existe(self.estadoActual,simbolo):
             self.cinta.transicion(self.transicion.simbolo,self.transicion.direccion)
-            self.estadoActual=self.transicion.siguienteEstado()
+            self.estadoActual=self.transicion.estado
             return 0
         else:
-            if acepta():
+            if self.acepta():
                 return 1
             else:
                 return -1
